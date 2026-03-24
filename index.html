@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Petsystem</title>
+
+ 
+
+<style>
+
+:root {
+
+  --bg: #f9fbfa;
+
+  --text: #2e2e2e;
+
+  --primary: #5dbb9d;
+
+  --secondary: #e8f5f1;
+
+}
+
+ 
+
+.dark {
+
+  --bg: #1c1c1c;
+
+  --text: #f1f1f1;
+
+  --secondary: #2a2a2a;
+
+}
+
+ 
+
+body {
+
+  margin: 0;
+
+  font-family: "Segoe UI", sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  transition: 0.3s;
+
+}
+
+ 
+
+/* HEADER */
+
+header {
+
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background: var(--secondary);
+
+}
+
+ 
+
+header h1 {
+
+  font-size: 36px;
+
+  margin-bottom: 10px;
+
+}
+
+ 
+
+/* NAV */
+
+nav {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  padding: 15px;
+
+}
+
+ 
+
+nav button {
+
+  background: none;
+
+  border: none;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+ 
+
+/* SECTION */
+
+section {
+
+  display: none;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 40px 20px;
+
+  line-height: 1.6;
+
+}
+
+ 
+
+.active {
+
+  display: block;
+
+}
+
+ 
+
+/* BOX */
+
+.box {
+
+  background: var(--secondary);
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  margin: 20px 0;
+
+}
+
+ 
+
+/* BTN */
+
+.btn {
+
+  background: var(--primary);
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  border: none;
+
+}
+
+ 
+
+/* DARK */
+
+.toggle {
+
+  position: fixed;
+
+  top: 15px;
+
+  right: 15px;
+
+  cursor: pointer;
+
+}
+
+</style>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+<div class="toggle" onclick="toggleDark()">🌙</div>
+
+ 
+
+<header>
+
+<h1>🐾 Petsystem</h1>
+
+<p>Infraestrutura tecnológica para pet shops que valorizam organização, eficiência e continuidade no atendimento</p>
+
+</header>
+
+ 
+
+<nav>
+
+<button onclick="show('home')">Início</button>
+
+<button onclick="show('empresa')">Empresa</button>
+
+<button onclick="show('servicos')">Serviços</button>
+
+<button onclick="show('contato')">Contato</button>
+
+</nav>
+
+ 
+
+<!-- HOME -->
+
+<section id="home" class="active">
+
+ 
+
+<h2>Bem-vindo à Petsystem</h2>
+
+ 
+
+<p>A Petsystem é uma proposta de solução tecnológica desenvolvida com foco em pequenos e médios pet shops que dependem diretamente de sistemas digitais para o funcionamento diário de suas atividades.</p>
+
+ 
+
+<p>Em um cenário onde a tecnologia está cada vez mais presente, falhas simples podem causar impactos significativos, como atrasos no atendimento, perda de informações e insatisfação de clientes.</p>
+
+ 
+
+<div class="box">
+
+<p>Este projeto foi desenvolvido com base na análise de situações reais, considerando dificuldades comuns enfrentadas por estabelecimentos do setor pet.</p>
+
+</div>
+
+ 
+
+<p>Nosso objetivo é oferecer suporte técnico eficiente, garantindo estabilidade operacional e continuidade nos processos internos.</p>
+
+ 
+
+<p>A Petsystem atua de forma preventiva e corretiva, antecipando falhas e garantindo que os sistemas funcionem de maneira confiável.</p>
+
+ 
+
+</section>
+
+ 
+
+<!-- EMPRESA -->
+
+<section id="empresa">
+
+ 
+
+<h2>Sobre a empresa</h2>
+
+ 
+
+<p>A Petsystem foi concebida como uma empresa especializada em suporte técnico para pet shops, com foco em infraestrutura tecnológica, manutenção de equipamentos e gestão de redes.</p>
+
+ 
+
+<p>O projeto considera a realidade de pequenos negócios que utilizam computadores para cadastro de clientes, agendamento de serviços, controle de estoque e registro de atendimentos.</p>
+
+ 
+
+<p>Ao identificar a dependência desses sistemas, torna-se evidente a necessidade de um suporte técnico especializado, capaz de atuar de forma rápida e eficiente.</p>
+
+ 
+
+<div class="box">
+
+<p>Diferente de empresas genéricas de suporte, a Petsystem foca exclusivamente no segmento pet, compreendendo suas necessidades específicas e propondo soluções adequadas.</p>
+
+</div>
+
+ 
+
+<p>Além disso, a empresa adota práticas como organização de dados, prevenção de falhas e atendimento baseado em SLA, garantindo previsibilidade no suporte.</p>
+
+ 
+
+</section>
+
+ 
+
+<!-- SERVIÇOS -->
+
+<section id="servicos">
+
+ 
+
+<h2>Serviços oferecidos</h2>
+
+ 
+
+<p>A Petsystem oferece um conjunto de serviços voltados à manutenção e melhoria do ambiente tecnológico dos pet shops.</p>
+
+ 
+
+<div class="box">
+
+<p><b>Manutenção de computadores:</b> identificação e correção de falhas, limpeza de sistema, otimização de desempenho e atualização de softwares.</p>
+
+</div>
+
+ 
+
+<div class="box">
+
+<p><b>Configuração de redes:</b> instalação e ajuste de redes Wi-Fi, garantindo cobertura adequada e estabilidade de conexão.</p>
+
+</div>
+
+ 
+
+<div class="box">
+
+<p><b>Backup de dados:</b> implementação de rotinas de segurança para evitar perda de informações importantes.</p>
+
+</div>
+
+ 
+
+<div class="box">
+
+<p><b>Suporte técnico com SLA:</b> atendimento com tempo de resposta definido, garantindo rapidez na solução de problemas.</p>
+
+</div>
+
+ 
+
+<p>Todos os serviços são pensados para atender às necessidades reais do cliente, priorizando eficiência e continuidade operacional.</p>
+
+ 
+
+</section>
+
+ 
+
+<!-- CONTATO -->
+
+<section id="contato">
+
+ 
+
+<h2>Contato</h2>
+
+ 
+
+<p>Para simulação de atendimento, foram definidos os seguintes canais:</p>
+
+ 
+
+<p>Telefone: (11) 98765-4321</p>
+
+<p>Email: contato@petsystem.com</p>
+
+ 
+
+<p>O canal abaixo representa um formulário de abertura de chamados técnicos.</p>
+
+ 
+
+<input placeholder="Nome"><br>
+
+<input placeholder="Empresa"><br>
+
+<textarea placeholder="Descreva o problema"></textarea><br>
+
+ 
+
+<button class="btn">Enviar</button>
+
+ 
+
+</section>
+
+ 
+
+<script>
+
+function show(id){
+
+document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+
+document.getElementById(id).classList.add("active");
+
+}
+
+ 
+
+function toggleDark(){
+
+document.body.classList.toggle("dark");
+
+}
+
+</script>
+
+ 
+
+</body>
+
+</html>
+
+
